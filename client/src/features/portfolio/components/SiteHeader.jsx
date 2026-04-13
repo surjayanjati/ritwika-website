@@ -13,6 +13,7 @@ export function SiteHeader({ identity }) {
       <nav className="site-header__nav">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#process">Process</a>
         <a href="#testimonials">Testimonials</a>
         <a href={`mailto:${identity.email}`}>Contact</a>
       </nav>

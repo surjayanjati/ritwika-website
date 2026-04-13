@@ -5,7 +5,8 @@ export function TestimonialsSection({ testimonials }) {
     <section className="section testimonial-section" id="testimonials">
       <SectionHeading
         eyebrow="Testimonials"
-        title="What clients said."
+        title="The work feels clearer to clients because the thinking is clearer on the page."
+        copy="A strong portfolio should read as intentional before anyone needs to explain it in a call."
       />
       <div className="testimonial-grid">
         {testimonials.map((testimonial) => (

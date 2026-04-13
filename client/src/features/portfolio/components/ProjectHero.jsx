@@ -10,10 +10,16 @@ export function ProjectHero({ project }) {
         <span>{project.category}</span>
       </div>
       <div className="project-hero__body">
-        <div>
+        <div className="project-hero__content">
           <p className="hero__kicker">{project.client}</p>
           <h1>{project.title}</h1>
+          <p className="project-hero__cover-note">{project.coverNote}</p>
           <p className="project-hero__summary">{project.intro}</p>
+          <div className="project-hero__services">
+            {project.services.map((service) => (
+              <span key={service}>{service}</span>
+            ))}
+          </div>
         </div>
         <div className="project-hero__meta">
           {project.metrics.map((item) => (

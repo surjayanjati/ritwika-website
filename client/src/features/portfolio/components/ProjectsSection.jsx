@@ -6,8 +6,8 @@ export function ProjectsSection({ projects }) {
     <section className="section" id="projects">
       <SectionHeading
         eyebrow="Selected Projects"
-        title="Selected work."
-        copy="A clean entry into Ritwika Mandal's strongest portfolio pieces."
+        title="Work that explains the thinking, not just the surface."
+        copy="Each project is framed to show the category, the problem, the creative direction, and the result so the story lands faster."
       />
       <div className="projects-grid">
         {projects.map((project, index) => (
@@ -27,6 +27,7 @@ export function ProjectsSection({ projects }) {
               <div className="project-card__body">
                 <h3>{project.title}</h3>
                 <p className="project-card__summary">{project.summary}</p>
+                <p className="project-card__note">{project.coverNote}</p>
               </div>
               <div className="project-card__details">
                 <span>{project.year}</span>
@@ -37,7 +38,7 @@ export function ProjectsSection({ projects }) {
                   <li key={service}>{service}</li>
                 ))}
               </ul>
-              <span className="project-card__cta">Open project</span>
+              <span className="project-card__cta">Read case study</span>
             </div>
           </Link>
         ))}

@@ -5,7 +5,8 @@ export function ProjectNavigator({ projects, currentSlug }) {
     <section className="section">
       <div className="case-studies-heading">
         <span className="section-heading__eyebrow">More Work</span>
-        <h2>More selected work.</h2>
+        <h2>Continue through the portfolio.</h2>
+        <p>Related projects that show how the visual language changes across categories without losing the same level of restraint.</p>
       </div>
       <div className="project-nav-grid">
         {projects

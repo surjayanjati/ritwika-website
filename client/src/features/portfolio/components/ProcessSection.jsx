@@ -5,7 +5,8 @@ export function ProcessSection({ process }) {
     <section className="section process-section" id="process">
       <SectionHeading
         eyebrow="Process"
-        title="A deliberate sequence from concept pressure to finished form."
+        title="A deliberate sequence from strategy pressure to launch-ready clarity."
+        copy="The workflow is built to make the portfolio stronger at every layer: positioning, structure, image rhythm, and final polish."
       />
       <div className="process-grid">
         {process.map((step) => (

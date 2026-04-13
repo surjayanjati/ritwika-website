@@ -3,7 +3,8 @@ export function CaseStudiesSection({ caseStudies }) {
     <section className="section">
       <div className="case-studies-heading">
         <span className="section-heading__eyebrow">Case Studies</span>
-        <h2>Key parts of the project, shown cleanly.</h2>
+        <h2>Key decisions inside the project, broken into readable parts.</h2>
+        <p>Each case study isolates a design move, the deliverables involved, and the core idea guiding the execution.</p>
       </div>
       <div className="case-studies-grid">
         {caseStudies.map((caseStudy, index) => (
@@ -21,7 +22,7 @@ export function CaseStudiesSection({ caseStudies }) {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <strong>{caseStudy.insight}</strong>
+            <strong>Insight: {caseStudy.insight}</strong>
           </article>
         ))}
       </div>

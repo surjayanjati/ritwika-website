@@ -30,6 +30,7 @@ export function ProjectDetailPage() {
       <CaseStudiesSection caseStudies={project.caseStudies} />
       <ProjectNavigator projects={portfolio.projects} currentSlug={project.slug} />
       <ContactSection
+        availability={portfolio.identity.availability}
         prompt={portfolio.contact.prompt}
         email={portfolio.identity.email}
       />
