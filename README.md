@@ -36,22 +36,23 @@ docker compose up --build
 
 The site will be available at `http://localhost` and the backend at `http://localhost:5001/api/portfolio`.
 
-## Free deployment
+## Vercel deployment
 
-The simplest free setup for this repo is a single Render web service:
+This repo is configured for Vercel:
 
-- Render builds the client and server from this repo.
-- The Express server serves the built React app in production.
-- Every push to `main` can auto-deploy through Render's Git integration.
+- The frontend is built from `client`.
+- The API is served by Vercel Functions under `/api`.
+- Every push to `main` can auto-deploy through Vercel's Git integration.
 
-### Render setup
+### Vercel setup
 
-1. Sign in to Render and create a new Blueprint or Web Service from this GitHub repo.
-2. Render will detect [`render.yaml`](./render.yaml) in the repo root.
-3. Deploy the `main` branch.
-4. After the first deploy, open:
-   - `/` for the portfolio site
-   - `/api/health` for the health check
-   - `/api/portfolio` for the API
+1. Import the GitHub repo into Vercel.
+2. Keep the project root as the repo root.
+3. Vercel will use [`vercel.json`](./vercel.json) for build settings.
+4. Deploy the `main` branch.
 
-This uses Render's free web service plan, which is suitable for hobby/testing deployments.
+After deployment, check:
+
+- `/`
+- `/api/health`
+- `/api/portfolio`
