@@ -7,6 +7,7 @@ import { HeroSection } from "../components/HeroSection";
 import { ManifestoSection } from "../components/ManifestoSection";
 import { ProcessSection } from "../components/ProcessSection";
 import { ProjectsSection } from "../components/ProjectsSection";
+import { SiteFooter } from "../components/SiteFooter";
 import { TestimonialsSection } from "../components/TestimonialsSection";
 import { usePortfolio } from "../hooks/usePortfolio";
 
@@ -45,9 +46,10 @@ export function PortfolioPage() {
       <TestimonialsSection testimonials={portfolio.testimonials.slice(0, 2)} />
       <ContactSection
         availability={portfolio.identity.availability}
-        prompt={portfolio.contact.prompt}
         email={portfolio.identity.email}
+        socialLinks={portfolio.identity.socialLinks}
       />
+      <SiteFooter identity={portfolio.identity} />
     </main>
   );
 }

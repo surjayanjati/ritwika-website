@@ -105,7 +105,6 @@ select {
 .project-card,
 .process-card,
 .testimonial-card,
-.contact-band,
 .project-hero,
 .project-overview__services span,
 .project-hero__meta div,
@@ -267,8 +266,7 @@ select {
 .hero__kicker,
 .section-heading__eyebrow,
 .statement-card span,
-.process-card span,
-.contact-band__content span {
+.process-card span {
   display: inline-flex;
   width: fit-content;
   color: rgba(19, 17, 14, 0.48);
@@ -289,9 +287,10 @@ select {
 
 .hero h1 {
   max-width: 12ch;
-  font-size: clamp(3.15rem, 6vw, 5.4rem);
-  line-height: 0.97;
-  letter-spacing: -0.065em;
+  font-size: clamp(2.65rem, 4.8vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 600;
 }
 
 .hero__intro {
@@ -317,7 +316,7 @@ select {
 }
 
 .hero__actions a,
-.contact-band a,
+.contact-form button,
 .project-card__cta {
   display: inline-flex;
   align-items: center;
@@ -332,7 +331,7 @@ select {
 }
 
 .hero__action--primary,
-.contact-band a {
+.contact-form button {
   color: #fffaf1;
   border-color: rgba(19, 17, 14, 0.16);
   background: linear-gradient(180deg, #201d18 0%, #11100d 100%);
@@ -503,7 +502,7 @@ select {
 .testimonial-grid,
 .case-studies-grid,
 .project-nav-grid,
-.contact-band,
+.contact-section,
 .project-overview,
 .project-hero {
   animation: rise-in 620ms ease both;
@@ -882,43 +881,131 @@ select {
   border-top: 1px solid var(--line);
 }
 
-.contact-band {
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
   margin-top: 72px;
-  padding: 30px;
+}
+
+.contact-section__intro,
+.contact-form {
+  border: 1px solid var(--line);
   border-radius: 24px;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
   background: #ffffff;
+  padding: 28px;
 }
 
-.contact-band__content {
-  max-width: 760px;
+.contact-section__intro h2 {
+  margin: 14px 0 0;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
-.contact-band__content p {
-  margin: 12px 0 0;
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1.9rem, 3.5vw, 3rem);
-  line-height: 1.14;
-  letter-spacing: -0.04em;
+.contact-section__intro p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-.contact-band__content small {
+.contact-section__intro small {
   display: block;
-  margin-top: 14px;
+  margin-top: 18px;
   color: var(--muted);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.contact-band__content em {
+.contact-section__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.contact-section__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form span {
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: #ffffff;
+  color: var(--text);
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(19, 17, 14, 0.3);
+}
+
+.contact-form button {
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 32px 0;
+  margin-top: 72px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer strong {
   display: block;
-  margin-top: 14px;
-  color: rgba(19, 17, 14, 0.56);
-  font-style: normal;
-  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.site-footer p,
+.site-footer span {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.site-footer__links,
+.site-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.site-footer__links {
+  justify-content: center;
+}
+
+.site-footer__meta {
+  justify-content: flex-end;
 }
 
 .project-hero {
@@ -1311,7 +1398,7 @@ select {
   .project-card,
   .process-card,
   .testimonial-card,
-  .contact-band,
+  .contact-section,
   .project-hero,
   .case-study-card,
   .project-nav-card {
@@ -1358,9 +1445,9 @@ select {
     max-width: 360px;
   }
 
-  .contact-band {
-    align-items: start;
-    flex-direction: column;
+  .contact-section,
+  .site-footer {
+    grid-template-columns: 1fr;
   }
 
   .section {

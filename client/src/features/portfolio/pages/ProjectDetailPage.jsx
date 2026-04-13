@@ -7,6 +7,7 @@ import { ContactSection } from "../components/ContactSection";
 import { ProjectHero } from "../components/ProjectHero";
 import { ProjectNavigator } from "../components/ProjectNavigator";
 import { ProjectOverview } from "../components/ProjectOverview";
+import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
 export function ProjectDetailPage() {
@@ -31,9 +32,10 @@ export function ProjectDetailPage() {
       <ProjectNavigator projects={portfolio.projects} currentSlug={project.slug} />
       <ContactSection
         availability={portfolio.identity.availability}
-        prompt={portfolio.contact.prompt}
         email={portfolio.identity.email}
+        socialLinks={portfolio.identity.socialLinks}
       />
+      <SiteFooter identity={portfolio.identity} />
     </main>
   );
 }

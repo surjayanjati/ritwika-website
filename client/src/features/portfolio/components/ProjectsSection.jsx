@@ -6,8 +6,8 @@ export function ProjectsSection({ projects }) {
     <section className="section" id="projects">
       <SectionHeading
         eyebrow="Selected Projects"
-        title="Work that explains the thinking, not just the surface."
-        copy="Each project is framed to show the category, the problem, the creative direction, and the result so the story lands faster."
+        title="Selected projects."
+        copy="Identity, websites, and image-led systems shaped to feel sharper, clearer, and more intentional."
       />
       <div className="projects-grid">
         {projects.map((project, index) => (
