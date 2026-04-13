@@ -8,7 +8,7 @@ export const portfolioData = {
     focus: "Portfolio websites, brand identity, art direction",
     availability: "Booking select 2026 projects",
     email: "ritwikamandal.design@gmail.com",
-    portraitImage: "/main.jpeg",
+    portraitImage: "",
     shortBio:
       "Specializing in sharp monochrome interfaces, case-study storytelling, and launch-ready visual systems.",
     socialLinks: [

@@ -1,3 +1,5 @@
+import mainProfileImage from "../../../../main.jpeg";
+
 export function HeroSection({ identity, projectCount, selectedClientsCount }) {
   return (
     <section className="hero">
@@ -42,7 +44,7 @@ export function HeroSection({ identity, projectCount, selectedClientsCount }) {
             className="hero__portrait"
             decoding="async"
             fetchPriority="high"
-            src={identity.portraitImage}
+            src={mainProfileImage}
           />
         </div>
         <div className="hero__meta">
