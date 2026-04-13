@@ -35,3 +35,23 @@ docker compose up --build
 ```
 
 The site will be available at `http://localhost` and the backend at `http://localhost:5001/api/portfolio`.
+
+## Free deployment
+
+The simplest free setup for this repo is a single Render web service:
+
+- Render builds the client and server from this repo.
+- The Express server serves the built React app in production.
+- Every push to `main` can auto-deploy through Render's Git integration.
+
+### Render setup
+
+1. Sign in to Render and create a new Blueprint or Web Service from this GitHub repo.
+2. Render will detect [`render.yaml`](./render.yaml) in the repo root.
+3. Deploy the `main` branch.
+4. After the first deploy, open:
+   - `/` for the portfolio site
+   - `/api/health` for the health check
+   - `/api/portfolio` for the API
+
+This uses Render's free web service plan, which is suitable for hobby/testing deployments.
