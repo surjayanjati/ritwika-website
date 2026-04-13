@@ -43,6 +43,7 @@ This repo is configured for Vercel:
 - The frontend is built from `client`.
 - The API is served by Vercel Functions under `/api`.
 - Every push to `main` can auto-deploy through Vercel's Git integration.
+- GitHub Actions runs CI on every push to `main` and on pull requests.
 
 ### Vercel setup
 
@@ -56,3 +57,11 @@ After deployment, check:
 - `/`
 - `/api/health`
 - `/api/portfolio`
+
+### Pipeline
+
+This repo includes a GitHub Actions workflow at `.github/workflows/ci.yml`.
+
+- Pull requests run CI checks before merge.
+- Pushes to `main` run CI automatically.
+- Vercel deploys the latest pushed commit from `main`.
