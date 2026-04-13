@@ -14,7 +14,7 @@ export function ProjectNavigator({ projects, currentSlug }) {
           .map((project) => (
             <Link className="project-nav-card" key={project.slug} to={`/projects/${project.slug}`}>
               <div className="project-nav-card__media">
-                <img alt={project.title} src={project.thumbnail} />
+                <img alt={project.title} decoding="async" loading="lazy" src={project.thumbnail} />
               </div>
               <span>{project.category}</span>
               <h3>{project.title}</h3>

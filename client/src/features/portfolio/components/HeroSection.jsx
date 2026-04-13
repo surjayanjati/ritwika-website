@@ -22,7 +22,13 @@ export function HeroSection({ identity }) {
       </div>
       <div className="hero__visual">
         <div className="hero__portrait-wrap">
-          <img alt={identity.name} className="hero__portrait" src={identity.portraitImage} />
+          <img
+            alt={identity.name}
+            className="hero__portrait"
+            decoding="async"
+            fetchPriority="high"
+            src={identity.portraitImage}
+          />
         </div>
         <div className="hero__meta">
           <div>

@@ -17,7 +17,7 @@ export function ProjectsSection({ projects }) {
             to={`/projects/${project.slug}`}
           >
             <div className="project-card__media">
-              <img alt={project.title} src={project.thumbnail} />
+              <img alt={project.title} decoding="async" loading="lazy" src={project.thumbnail} />
             </div>
             <div className="project-card__panel">
               <div className="project-card__header">

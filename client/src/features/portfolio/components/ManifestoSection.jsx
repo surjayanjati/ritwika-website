@@ -3,7 +3,7 @@ export function ManifestoSection({ manifesto, capabilities, featureImage }) {
     <section className="about-band section" id="about">
       <article className="about-band__visual">
         <div className="about-band__image">
-          <img alt="Selected portfolio visual" src={featureImage} />
+          <img alt="Selected portfolio visual" decoding="async" loading="lazy" src={featureImage} />
         </div>
       </article>
       <article className="about-band__content">

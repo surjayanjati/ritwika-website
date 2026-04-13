@@ -13,7 +13,12 @@ export function ProjectOverview({ project }) {
       <div className="project-overview__gallery">
         {project.gallery.map((image, index) => (
           <div className="project-overview__image" key={image}>
-            <img alt={`${project.title} gallery ${index + 1}`} src={image} />
+            <img
+              alt={`${project.title} gallery ${index + 1}`}
+              decoding="async"
+              loading="lazy"
+              src={image}
+            />
           </div>
         ))}
       </div>

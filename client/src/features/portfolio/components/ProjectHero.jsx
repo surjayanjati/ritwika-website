@@ -25,7 +25,7 @@ export function ProjectHero({ project }) {
         </div>
       </div>
       <div className="project-hero__image">
-        <img alt={project.title} src={project.heroImage} />
+        <img alt={project.title} decoding="async" fetchPriority="high" src={project.heroImage} />
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ export function FeaturedStorySection({ projects }) {
         {projects.map((project) => (
           <Link className="featured-story-card" key={project.slug} to={`/projects/${project.slug}`}>
             <div className="featured-story-card__image">
-              <img alt={project.title} src={project.heroImage} />
+              <img alt={project.title} decoding="async" loading="lazy" src={project.heroImage} />
             </div>
             <div className="featured-story-card__content">
               <span>{project.category}</span>

@@ -2,14 +2,14 @@
   color-scheme: dark;
   --bg: #0c0c0c;
   --bg-soft: #141414;
-  --panel: rgba(255, 255, 255, 0.04);
+  --panel: rgba(255, 255, 255, 0.05);
   --panel-strong: rgba(255, 255, 255, 0.08);
   --text: #f6f4ee;
   --muted: rgba(246, 244, 238, 0.68);
   --line: rgba(255, 255, 255, 0.1);
   --accent: #6cae12;
   --accent-soft: rgba(108, 174, 18, 0.18);
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -90,7 +90,6 @@ select {
 .client-badge {
   border: 1px solid var(--line);
   background: var(--panel);
-  backdrop-filter: blur(14px);
 }
 
 .site-header {
@@ -298,7 +297,6 @@ select {
 .hero__portrait {
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%);
 }
 
 .hero__meta {
@@ -366,6 +364,8 @@ select {
 
 .section {
   padding-top: 64px;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 960px;
 }
 
 .about-band {
@@ -380,7 +380,6 @@ select {
 .about-band__services {
   border: 1px solid var(--line);
   background: var(--panel);
-  backdrop-filter: blur(14px);
   border-radius: 28px;
   padding: 24px;
 }
@@ -396,7 +395,6 @@ select {
 .about-band__image img {
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%);
 }
 
 .about-band__content {
@@ -534,7 +532,6 @@ select {
 .case-study-card__image img {
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%);
   transition: transform 240ms ease;
 }
 
@@ -837,7 +834,19 @@ select {
 .featured-story-card__image img {
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 .featured-story-card__content {

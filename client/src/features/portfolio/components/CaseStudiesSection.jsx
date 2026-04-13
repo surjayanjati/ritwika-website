@@ -9,7 +9,7 @@ export function CaseStudiesSection({ caseStudies }) {
         {caseStudies.map((caseStudy, index) => (
           <article className="case-study-card" key={caseStudy.slug}>
             <div className="case-study-card__image">
-              <img alt={caseStudy.title} src={caseStudy.image} />
+              <img alt={caseStudy.title} decoding="async" loading="lazy" src={caseStudy.image} />
             </div>
             <div className="case-study-card__header">
               <span>{String(index + 1).padStart(2, "0")}</span>
