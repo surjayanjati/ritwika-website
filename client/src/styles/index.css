@@ -244,7 +244,7 @@ select {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(420px, 0.8fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(340px, 0.6fr);
   gap: 48px;
   padding: clamp(36px, 4vw, 72px) 32px;
   min-height: calc(100vh - 28px);
@@ -260,7 +260,7 @@ select {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  max-width: 980px;
+  max-width: 1100px;
 }
 
 .hero__kicker,
@@ -286,11 +286,11 @@ select {
 }
 
 .hero h1 {
-  max-width: 12ch;
-  font-size: clamp(2.65rem, 4.8vw, 4.6rem);
+  max-width: 14ch;
+  font-size: clamp(2.4rem, 4.3vw, 4.1rem);
   line-height: 1;
   letter-spacing: -0.055em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .hero__intro {
@@ -638,7 +638,7 @@ select {
 }
 
 .projects-grid {
-  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   grid-auto-rows: 1fr;
 }
@@ -698,14 +698,6 @@ select {
 .project-nav-card:hover .project-nav-card__media img,
 .case-study-card:hover .case-study-card__image img {
   transform: scale(1.03);
-}
-
-.project-card--featured {
-  grid-row: span 2;
-}
-
-.project-card--featured .project-card__media {
-  aspect-ratio: 1.28 / 1.26;
 }
 
 .project-card__panel {
@@ -1433,7 +1425,7 @@ select {
 
   .hero h1 {
     max-width: 100%;
-    font-size: clamp(2.8rem, 12vw, 4.2rem);
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
   }
 
   .about-band__image {

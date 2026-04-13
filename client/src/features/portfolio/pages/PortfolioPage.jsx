@@ -8,7 +8,6 @@ import { ManifestoSection } from "../components/ManifestoSection";
 import { ProcessSection } from "../components/ProcessSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { SiteFooter } from "../components/SiteFooter";
-import { TestimonialsSection } from "../components/TestimonialsSection";
 import { usePortfolio } from "../hooks/usePortfolio";
 
 export function PortfolioPage() {
@@ -43,7 +42,6 @@ export function PortfolioPage() {
       <FeaturedStorySection projects={portfolio.projects.slice(0, 3)} />
       <ProjectsSection projects={portfolio.projects} />
       <ProcessSection process={portfolio.process} />
-      <TestimonialsSection testimonials={portfolio.testimonials.slice(0, 2)} />
       <ContactSection
         availability={portfolio.identity.availability}
         email={portfolio.identity.email}

@@ -12,7 +12,7 @@ export function ProjectsSection({ projects }) {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <Link
-            className={`project-card ${index === 0 ? "project-card--featured" : ""}`}
+            className="project-card"
             key={project.slug}
             to={`/projects/${project.slug}`}
           >
