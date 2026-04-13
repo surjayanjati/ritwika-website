@@ -33,12 +33,14 @@ export function ProjectsSection({ projects }) {
                 <span>{project.year}</span>
                 <span>{project.client}</span>
               </div>
-              <ul className="project-card__tags">
-                {project.services.map((service) => (
-                  <li key={service}>{service}</li>
-                ))}
-              </ul>
-              <span className="project-card__cta">Read case study</span>
+              <div className="project-card__footer">
+                <ul className="project-card__tags">
+                  {project.services.map((service) => (
+                    <li key={service}>{service}</li>
+                  ))}
+                </ul>
+                <span className="project-card__cta">Read case study</span>
+              </div>
             </div>
           </Link>
         ))}

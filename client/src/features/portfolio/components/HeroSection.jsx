@@ -5,11 +5,7 @@ export function HeroSection({ identity, projectCount, selectedClientsCount }) {
     <section className="hero">
       <div className="hero__content">
         <p className="hero__kicker">Independent Designer based in {identity.location}</p>
-        <h1>
-          Quiet visuals.
-          <br />
-          Clearer stories.
-        </h1>
+        <h1>Quiet visuals with clearer stories and stronger project framing.</h1>
         <p className="hero__intro">{identity.name}</p>
         <p className="hero__lede">{identity.statement}</p>
         <div className="hero__actions">
