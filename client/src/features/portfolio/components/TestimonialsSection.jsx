@@ -11,8 +11,9 @@ export function TestimonialsSection({ testimonials }) {
       <div className="testimonial-grid">
         {testimonials.map((testimonial) => (
           <article className="testimonial-card" key={testimonial.name}>
+            <span className="testimonial-card__mark">"</span>
             <p>"{testimonial.quote}"</p>
-            <div>
+            <div className="testimonial-card__footer">
               <strong>{testimonial.name}</strong>
               <span>{testimonial.title}</span>
             </div>

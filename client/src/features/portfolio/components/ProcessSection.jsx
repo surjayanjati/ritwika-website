@@ -14,6 +14,7 @@ export function ProcessSection({ process }) {
             <span>{step.phase}</span>
             <h3>{step.name}</h3>
             <p>{step.description}</p>
+            <small>Clear inputs, cleaner outputs.</small>
           </article>
         ))}
       </div>

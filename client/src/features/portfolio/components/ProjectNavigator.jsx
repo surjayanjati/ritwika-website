@@ -17,9 +17,15 @@ export function ProjectNavigator({ projects, currentSlug }) {
               <div className="project-nav-card__media">
                 <img alt={project.title} decoding="async" loading="lazy" src={project.thumbnail} />
               </div>
-              <span>{project.category}</span>
-              <h3>{project.title}</h3>
-              <p>{project.coverNote}</p>
+              <div className="project-nav-card__content">
+                <span>{project.category}</span>
+                <h3>{project.title}</h3>
+                <p>{project.coverNote}</p>
+              </div>
+              <div className="project-nav-card__footer">
+                <small>{project.year}</small>
+                <strong>View project</strong>
+              </div>
             </Link>
           ))}
       </div>

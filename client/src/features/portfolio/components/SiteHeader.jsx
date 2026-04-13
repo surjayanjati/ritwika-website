@@ -15,9 +15,12 @@ export function SiteHeader({ identity }) {
         <a href="#about">About</a>
         <a href="#process">Process</a>
         <a href="#testimonials">Testimonials</a>
-        <a href={`mailto:${identity.email}`}>Contact</a>
       </nav>
-      <div className="site-header__socials">
+      <div className="site-header__actions">
+        <a className="site-header__contact" href={`mailto:${identity.email}`}>
+          Start a project
+        </a>
+        <div className="site-header__socials">
         {identity.socialLinks.map((item) => (
           <a
             aria-label={item.label}
@@ -29,6 +32,7 @@ export function SiteHeader({ identity }) {
             {item.shortLabel}
           </a>
         ))}
+        </div>
       </div>
     </header>
   );

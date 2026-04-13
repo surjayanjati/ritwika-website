@@ -19,6 +19,10 @@ export function FeaturedStorySection({ projects }) {
               <span>{project.category}</span>
               <h3>{project.title}</h3>
               <p>{project.coverNote}</p>
+              <div className="featured-story-card__footer">
+                <small>{project.year} / {project.client}</small>
+                <strong>Open case study</strong>
+              </div>
             </div>
           </Link>
         ))}
